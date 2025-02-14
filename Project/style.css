@@ -1,0 +1,20 @@
+body{
+    background-color: gray;
+    font-style: monospace;
+}
+
+nav {
+    background-color: grey;
+    margin: 5px 5px;
+}
+ul li{
+    display: inline;
+    margin: 5px ;
+    padding: 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+    text-shadow: 2px 1px 3px black;
+}
