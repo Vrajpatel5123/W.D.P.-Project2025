@@ -1,20 +1,48 @@
-body{
-    background-color: gray;
-    font-style: monospace;
+*{
+    text-decoration: none;
+    background-color: grey;
 }
 
-nav {
-    background-color: grey;
-    margin: 5px 5px;
+.navbar{
+    background-color: gray;
+    font-family: monospace;
+    padding-right: 15px;
+    padding-left: 15px;
 }
-ul li{
-    display: inline;
-    margin: 5px ;
-    padding: 10px;
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 30px;
+    font-weight: 500px;
+    color: whitesmoke;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
 }
 
 li a{
-    text-decoration: none;
     color: black;
-    text-shadow: 2px 1px 3px black;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-right: 25px; /*Makes the li in ul space and more neat look*/
+}
+
+button{
+    background-color: grey;
+    margin-left: 10px;
+    border-radius: 15px;
+    padding: 15px;
+    width: 90px;
+}
+
+button a{
+    color: whitesmoke;
+    font-weight: bold;
 }
