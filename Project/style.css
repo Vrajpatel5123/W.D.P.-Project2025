@@ -34,6 +34,10 @@ li a{
     margin-right: 25px; /*Makes the li in ul space and more neat look*/
 }
 
+li a:hover{
+    color: gold;
+}
+
 button{
     background-color: grey;
     margin-left: 10px;
@@ -42,7 +46,12 @@ button{
     width: 90px;
 }
 
+
 button a{
     color: whitesmoke;
     font-weight: bold;
+}
+
+button a:hover{
+    color: gold;
 }
