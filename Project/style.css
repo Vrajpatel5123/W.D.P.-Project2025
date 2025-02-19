@@ -1,8 +1,20 @@
 *{
     text-decoration: none;
-    background-color: grey;
 }
 
+img{
+    display: block;
+    margin: auto;
+    width: 850px;
+}
+
+h1 {
+    text-align: center;
+}
+
+body{
+    background-color: grey;
+}
 .navbar{
     background-color: gray;
     font-family: monospace;
@@ -54,4 +66,34 @@ button a{
 
 button a:hover{
     color: gold;
+}
+
+form div label{
+    display: block;
+    padding: 10px;
+    font-size: 30px;
+    color: gold;
+}
+
+form div input {
+    border-radius: 8px;
+    background-color: gray;
+    color: gold;
+    border-color: none;
+}
+
+form {
+    justify-items: center;
+    border-radius: 50px;
+    
+}
+
+
+form .submit{
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 20px;
+    color: gold;
+    background: black;
+    
 }
