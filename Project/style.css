@@ -97,3 +97,7 @@ form .submit{
     background: black;
     
 }
+
+input::placeholder{
+    color: gold;
+}
