@@ -98,6 +98,17 @@ form .submit{
     
 }
 
+.deletebtn{
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 20px;
+    color: darkred;
+    background: black;
+    size: 20%;
+    float: right;
+    ;
+}
+
 input::placeholder{
     color: gold;
 }
