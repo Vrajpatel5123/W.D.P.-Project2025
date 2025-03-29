@@ -7,4 +7,4 @@
 
 # My ERD Diagram
 
-!(/Web and Database Programming/Project/W.D.P.-Project2025/Project/images/Updated ERD.png)
+![](/Web and Database Programming/Project/W.D.P.-Project2025/Project/images/Updated ERD.png)
