@@ -7,4 +7,10 @@
 
 # My ERD Diagram
 
+### ERD
+
+![ERD#1](/Project/images/E-R%20Model.pdf.png)
+
+### ERD with Relations
+
 ![ERD](/Project/images/Updated%20ERD.png)
