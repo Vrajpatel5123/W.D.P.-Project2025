@@ -98,17 +98,33 @@ form .submit{
     
 }
 
-.deletebtn{
+#delete{
     margin-top: 10px;
     border-radius: 20px;
     border: 20px;
     color: darkred;
     background: black;
-    size: 20%;
+    size: 100%;
     float: right;
-    ;
+    
 }
 
 input::placeholder{
+    color: gold;
+}
+
+.loginTextp{
+    font-size: 20px;
+    color: gold;
+}
+
+.loginText a{
+    color: black;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.loginText a:hover{
     color: gold;
 }
