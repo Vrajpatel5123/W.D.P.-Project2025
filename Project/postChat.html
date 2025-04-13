@@ -31,19 +31,22 @@
     </nav>
     <h1>Post about anything in life and nothing about the dark side.</h1>
 
-    <form id="postChat" class="login">
+    <form id="postChat" class="postChat">
       <div>
         <label for="text">Title: </label>
-        <input type="text" placeholder="Add anything" id="text" />
+        <input type="text" placeholder="Add anything" id="postTitle" />
 
-        <label for="picture">Pic: </label>
+        <label for="post">Post: </label>
         <input
-          type="picture"
-          placeholder="Add any picture on the title or anything"
-          id="picture"
+          type="type"
+          placeholder="Add post about the title or anything"
+          id="Post"
         />
       </div>
-      <input class="submit" type="submit" value="submit" />
+      <p id="error"></p>
+      <h2 id="post"></h2>
+      <input class="submit" type="submit" value="postChat" />
     </form>
+    <script src="postChat.js"></script>
   </body>
 </html>
