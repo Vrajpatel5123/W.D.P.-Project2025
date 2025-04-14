@@ -1,0 +1,130 @@
+*{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 850px;
+}
+
+h1 {
+    text-align: center;
+}
+
+body{
+    background-color: grey;
+}
+.navbar{
+    background-color: gray;
+    font-family: monospace;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 30px;
+    font-weight: 500px;
+    color: whitesmoke;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    color: black;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-right: 25px; /*Makes the li in ul space and more neat look*/
+}
+
+li a:hover{
+    color: gold;
+}
+
+button{
+    background-color: grey;
+    margin-left: 10px;
+    border-radius: 15px;
+    padding: 15px;
+    width: 90px;
+}
+
+
+button a{
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+button a:hover{
+    color: gold;
+}
+
+form div label{
+    display: block;
+    padding: 10px;
+    font-size: 30px;
+    color: gold;
+}
+
+form div input {
+    border-radius: 8px;
+    background-color: gray;
+    color: gold;
+    border-color: none;
+}
+
+form {
+    justify-items: center;
+    border-radius: 50px;
+    
+}
+
+
+form .submit{
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 20px;
+    color: gold;
+    background: black;
+    
+}
+
+#delete{
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 20px;
+    color: darkred;
+    background: black;
+    size: 100%;
+    float: right;
+    
+}
+
+input::placeholder{
+    color: gold;
+}
+
+.loginTextp{
+    font-size: 20px;
+    color: gold;
+}
+
+.loginText a{
+    color: black;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.loginText a:hover{
+    color: gold;
+}
