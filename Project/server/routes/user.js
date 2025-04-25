@@ -16,7 +16,7 @@ router
         try{
         
             const users = await user.loginUser(req.body)
-            res.send({...users,password: undefined})
+            res.send({...users,Password: undefined})
         } catch(err){
             res.status(401).send({error: err.message})
         }
@@ -25,7 +25,7 @@ router
     .post('/register', async (req,res) => {
         try{
             const users = await user.registerUser(req.body)
-            res.send({...users,password: undefined})
+            res.send({...users, Password: undefined})
         }catch(err){
             res.status(401).send({error: err.message})
         }
