@@ -38,16 +38,17 @@ async function loginUser(user){
     let cUser = await userExists(user.Username)
     if(!cUser[0]) throw Error('User does not exist!')
     if(cUser[0].Password != user.Password) throw Error('Password is incorrect!')
-    console.log(cUser[0])
     return cUser[0]
 }
 
 async function userExists(Username){
+    console.log(Username)
     let sql= `
-    SELECT * FROM User
-    WHERE username = "${Username}"
+    SELECT * FROM Users
+    WHERE Username = "${Username}"
     `
-
+    const u = await con.query(sql)
+    console.log(u)
     return await con.query(sql)
 }
 
@@ -68,14 +69,13 @@ async function editUser(user){
     let sql = `
     UPDATE Users SET
     username = "${user.Username}"
-    WHERE userId = ${user.userId}
+    WHERE userId =  ${user.UserId}
     `
 
     await con.query(sql)
     const currentUser = await userExists(user.Username)
     return currentUser[0]
 }
-
 
 
 //User Example:
@@ -88,9 +88,10 @@ const user = {
 }
 
 async function deleteAccount(user) {
+    console.log(user)
     let sql = `
       DELETE FROM Users
-      WHERE userId = ${user.userId}
+      WHERE userId = ${user.UserId}
     `
     await con.query(sql)
   }

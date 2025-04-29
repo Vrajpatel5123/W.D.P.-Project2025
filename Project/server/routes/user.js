@@ -1,5 +1,5 @@
 const express = require("express")
-const user = require("../models/user")
+const user = require("../models/user.js")
 const router = express.Router()
 
 router 
@@ -48,5 +48,7 @@ router
             res.status(401).send({error: err.message})
         }
     })
+
+    
 
 module.exports = router
