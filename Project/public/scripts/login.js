@@ -1,3 +1,7 @@
+
+import { setCurrentUser } from "./register.js"
+import { fetchData } from "./logout.js"
+
 let loginForm = document.getElementById('login')
 loginForm.addEventListener('submit',login)
 
@@ -12,22 +16,31 @@ function login(e){
         errorSection.innerHTML = `Username and Password cannot be empty!!`
     }else{
         errorSection.innerHTML= " "
-        console.log(username)
-        console.log(password)
 
         const user = {
-            userName: username,
-            password: password
+            Username: username,
+            Password: password
         }
+
+        fetchData('/users/login', user, "POST")
+        .then(data =>{
+            if(!data.message){
+                setCurrentUser(data)
+                window.location.href = "index.html"
+            }
+        })
+        .catch(err => {
+            errorSection.innerHTML = `${err.message}`
+        })
 
         let section = document.getElementById('Welcome')
         section.innerHTML = `Welcome ${username}!`
 
-        console.log(user)
+        
     }
 
-    document.getElementById('username').value = " "
-    document.getElementById('password').value = " "
+    document.getElementById('username').value = ""
+    document.getElementById('password').value = ""
 }
 
 function validString(word){

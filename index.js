@@ -1,7 +1,10 @@
 // specify we want to use express
 const express = require('express')
 const app = express()
+const path = require("path")
+
 app.use(express.json())
+
 const userRoutes = require("./Project/server/routes/user")
 // const recipeRoutes = require("./server/routes/recipe")
 
@@ -13,8 +16,11 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use(express.static(__dirname + "/Project/public"))
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/Project/public/index.html')))
+
 app.use("/users", userRoutes)
-// app.use("/recipe", recipeRoutes)
+// app.use("/chat")
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!!`))
