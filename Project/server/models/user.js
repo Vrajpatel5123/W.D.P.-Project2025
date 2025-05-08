@@ -20,11 +20,12 @@ async function createTable(){
         Firstname VARCHAR(50) NOT NULL,
         Lastname VARCHAR(50) NOT NULL,
         Password VARCHAR(255) NOT NULL,
-        CONSTRAINT userPK PRIMARY KEY(userId)
+        CONSTRAINT userPK PRIMARY KEY(UserId)
     );`
     await con.query(sql)
 }
 createTable()
+
 
 //CRUD
 async function getAllUsers() {

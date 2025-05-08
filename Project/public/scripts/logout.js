@@ -11,6 +11,7 @@ if(getCurrentUser()){
           <li><a href="index.html"> Home </a></li>
           <li><a href="friends.html"> Friends </a></li>
           <li><a href="postChat.html"> Post</a></li>
+          <li><a href="profile.html"> Profile </a></li>
           <li><a id="logout">Logout</a></li>
         </ul>
       </div>
