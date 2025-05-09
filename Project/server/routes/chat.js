@@ -8,7 +8,6 @@ router
         try{
             // const chatById = req.body.UserId
             const chats = await chat.getAllChats()
-            console.log(chats)
             res.send(chats)
         } catch(err){
             res.status(401).send({error: err.message})
@@ -17,7 +16,6 @@ router
     .post('/createChat', async (req,res) => {
         try{
             const chats = await chat.createChat(req.body)
-            console.log(chats)
             res.send(chats)
         } catch(err){
             res.status(401).send({error: err.message})

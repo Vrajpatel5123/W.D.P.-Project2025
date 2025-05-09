@@ -8,7 +8,7 @@ async function createTable(){
         usersendto INT NULL,
         UserId INT NOT NULL,
         CONSTRAINT chatPK PRIMARY KEY(ChatId),
-        CONSTRAINT userFK FOREIGN KEY (UserId) REFERENCES Users(UserId)
+        CONSTRAINT usersFK FOREIGN KEY (UserId) REFERENCES users(UserId)
     );`
     await con.query(sql)
 }
@@ -18,7 +18,8 @@ createTable()
 
 async function getAllChats(){
     let sql = `
-    SELECT * FROM CHAT;`
+    SELECT * FROM CHAT
+    WHERE UserId = ${UserId}`
 
     return await con.query(sql)
 }
@@ -26,12 +27,12 @@ async function getAllChats(){
 //Create a chat table function
 async function createChat(chat){
     let sql = `
-    UPDATE chat SET
-    ChatMsg = "${chat.ChatMsg}",
-    usersendto = ${chat.usersendto}
-    WHERE UserId = ${chat.UserId};
+    INSERT INTO chat (ChatMsg, usersendto, UserId)
+    VALUES ("${chat.ChatMsg}", ${chat.usersendto}, ${chat.UserId});
     `
     await con.query(sql)
+    const chats = await getAllChats(chat.UserId)
+    return chats[0]
 }
 
 
